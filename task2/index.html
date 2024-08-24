@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feedback Form</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .star-rating {
+        color: #eeac82;
+        font-size: 40px;
+      }
+      @media (max-width: 768px) {
+        .table-responsive-stack td,
+        .table-responsive-stack th {
+          display: block;
+          text-align: left;
+        }
+        .table-responsive-stack tr {
+          display: block;
+          margin-bottom: 1rem;
+        }
+        .table-responsive-stack thead {
+          display: none;
+        }
+        /* .table-responsive-stack td:before {
+          content: attr(data-label);
+          font-weight: bold;
+          display: inline-block;
+          width: 50%;
+        } */
+
+        .table-responsive-stack td:not([data-label="Category"]):after {
+          content: attr(data-label);
+        }
+        td:first-child {
+          text-align: left; /* or any other alignment */
+        }
+        .radio-group {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+        }
+        .radio-item {
+          flex-basis: 48%;
+          margin-bottom: 0.5rem;
+        }
+        .radio-label {
+          font-size: 0.9rem;
+          margin-left: 0.25rem;
+        }
+        td:first-child {
+          background-color: #eee;
+        }
+      }
+
+      td {
+        text-align: center;
+        vertical-align: middle;
+      }
+      th {
+        text-align: center;
+        font-weight: normal;
+      }
+      label {
+        font-weight: bold;
+      }
+
+      @media (min-width: 768px) {
+        table {
+          table-layout: fixed;
+          width: 100%;
+        }
+        td {
+          width: 25%;
+        }
+        td:first-child {
+          text-align: left;
+          max-width: 80px;
+          word-wrap: break-word;
+        }
+        tbody > tr:nth-child(odd) {
+          background-color: #eee;
+        }
+        tbody > tr:nth-child(even) {
+          background-color: #fff;
+        }
+      }
+      .grey-button {
+        background-color: #eee;
+      }
+      input[type="radio"] {
+        -webkit-appearance: none; /* Remove default appearance */
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 2px solid black; /* Create the black outline */
+      }
+      .required:after {
+        content: "*";
+        color: red;
+        margin-left: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <form>
+        <div class="form-group mb-3">
+          <label for="firstName" class="form-label required">Name</label>
+          <div class="row">
+            <div class="col-md-6 mb-2">
+              <input type="text" class="form-control" id="firstName" />
+              <div class="text-muted">First</div>
+            </div>
+            <div class="col-md-6 mb-2">
+              <input type="text" class="form-control" id="lastName" />
+              <div class="text-muted">Last</div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group mb-3">
+          <label for="email" class="form-label required">Email</label>
+          <input type="email" class="form-control" id="email" />
+        </div>
+        <div class="form-group mb-3">
+          <label class="form-label required">Your Experience</label>
+          <div class="star-rating" style="margin-top: -5px">★★★★★</div>
+          <small class="text-muted"
+            >Overall, how would you rate your experience with us?</small
+          >
+        </div>
+        <div class="form-group mb-3">
+          <label class="form-label required">How satisfied are you with</label>
+          <div class="table-responsive">
+            <table class="table table-responsive-stack">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Very Unsatisfied</th>
+                  <th>Unsatisfied</th>
+                  <th>Neutral</th>
+                  <th>Satisfied</th>
+                  <th>Very Satisfied</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-label="Category">Purchase</td>
+                  <td data-label="Very Unsatisfied">
+                    <input
+                      type="radio"
+                      name="purchase"
+                      class="form-check-input"
+                    />
+                  </td>
+                  <td data-label="Unsatisfied">
+                    <input
+                      type="radio"
+                      name="purchase"
+                      class="form-check-input"
+                    />
+                  </td>
+                  <td data-label="Neutral">
+                    <input
+                      type="radio"
+                      name="purchase"
+                      class="form-check-input"
+                    />
+                  </td>
+                  <td data-label="Satisfied">
+                    <input
+                      type="radio"
+                      name="purchase"
+                      class="form-check-input"
+                    />
+                  </td>
+                  <td data-label="Very Satisfied">
+                    <input
+                      type="radio"
+                      name="purchase"
+                      class="form-check-input"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td data-label="Category">Service</td>
+                  <td data-label="Very Unsatisfied">
+                    <input
+                      type="radio"
+                      name="service"
+                      class="form-check-input"
+                    />
+                  </td>
+                  <td data-label="Unsatisfied">
+                    <input
+                      type="radio"
+                      name="service"
+                      class="form-check-input"
+                    />
+                  </td>
+                  <td data-label="Neutral">
+                    <input
+                      type="radio"
+                      name="service"
+                      class="form-check-input"
+                    />
+                  </td>
+                  <td data-label="Satisfied">
+                    <input
+                      type="radio"
+                      name="service"
+                      class="form-check-input"
+                    />
+                  </td>
+                  <td data-label="Very Satisfied">
+                    <input
+                      type="radio"
+                      name="service"
+                      class="form-check-input"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td data-label="Category">Company Overall</td>
+                  <td data-label="Very Unsatisfied">
+                    <input
+                      type="radio"
+                      name="overall"
+                      class="form-check-input"
+                    />
+                  </td>
+                  <td data-label="Unsatisfied">
+                    <input
+                      type="radio"
+                      name="overall"
+                      class="form-check-input"
+                    />
+                  </td>
+                  <td data-label="Neutral">
+                    <input
+                      type="radio"
+                      name="overall"
+                      class="form-check-input"
+                    />
+                  </td>
+                  <td data-label="Satisfied">
+                    <input
+                      type="radio"
+                      name="overall"
+                      class="form-check-input"
+                    />
+                  </td>
+                  <td data-label="Very Satisfied">
+                    <input
+                      type="radio"
+                      name="overall"
+                      class="form-check-input"
+                    />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="form-group mb-3">
+          <label class="form-label required">How likely are you to</label>
+          <div class="table-responsive">
+            <table class="table table-responsive-stack">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Very Unlikely</th>
+                  <th>Unlikely</th>
+                  <th>Neutral</th>
+                  <th>Likely</th>
+                  <th>Very Likely</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-label="Category">Buy from us again</td>
+                  <td data-label="Very Unlikely">
+                    <input
+                      type="radio"
+                      name="buyAgain"
+                      class="form-check-input"
+                    />
+                  </td>
+                  <td data-label="Unlikely">
+                    <input
+                      type="radio"
+                      name="buyAgain"
+                      class="form-check-input"
+                    />
+                  </td>
+                  <td data-label="Neutral">
+                    <input
+                      type="radio"
+                      name="buyAgain"
+                      class="form-check-input"
+                    />
+                  </td>
+                  <td data-label="Likely">
+                    <input
+                      type="radio"
+                      name="buyAgain"
+                      class="form-check-input"
+                    />
+                  </td>
+                  <td data-label="Very Likely">
+                    <input
+                      type="radio"
+                      name="buyAgain"
+                      class="form-check-input"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td data-label="Category">Recommend our product to others</td>
+                  <td data-label="Very Unlikely">
+                    <input
+                      type="radio"
+                      name="recommendProduct"
+                      class="form-check-input"
+                    />
+                  </td>
+                  <td data-label="Unlikely">
+                    <input
+                      type="radio"
+                      name="recommendProduct"
+                      class="form-check-input"
+                    />
+                  </td>
+                  <td data-label="Neutral">
+                    <input
+                      type="radio"
+                      name="recommendProduct"
+                      class="form-check-input"
+                    />
+                  </td>
+                  <td data-label="Likely">
+                    <input
+                      type="radio"
+                      name="recommendProduct"
+                      class="form-check-input"
+                    />
+                  </td>
+                  <td data-label="Very Likely">
+                    <input
+                      type="radio"
+                      name="recommendProduct"
+                      class="form-check-input"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td data-label="Category">Recommend our company to others</td>
+                  <td data-label="Very Unlikely">
+                    <input
+                      type="radio"
+                      name="recommendCompany"
+                      class="form-check-input"
+                    />
+                  </td>
+                  <td data-label="Unlikely">
+                    <input
+                      type="radio"
+                      name="recommendCompany"
+                      class="form-check-input"
+                    />
+                  </td>
+                  <td data-label="Neutral">
+                    <input
+                      type="radio"
+                      name="recommendCompany"
+                      class="form-check-input"
+                    />
+                  </td>
+                  <td data-label="Likely">
+                    <input
+                      type="radio"
+                      name="recommendCompany"
+                      class="form-check-input"
+                    />
+                  </td>
+                  <td data-label="Very Likely">
+                    <input
+                      type="radio"
+                      name="recommendCompany"
+                      class="form-check-input"
+                    />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="form-group mb-3">
+          <label for="comments" class="form-label"
+            >Additional comments or suggestions</label
+          >
+          <textarea class="form-control" id="comments" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn grey-button">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>

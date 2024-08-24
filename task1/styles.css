@@ -1,0 +1,128 @@
+body {
+  font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+  background-color: #fff;
+  color: #333;
+}
+
+
+.btn-learn {
+  background-color: #e0e1e2 !important;
+}
+
+.btn-videos {
+  background-color: #db2828 !important;
+  color: #fff !important;
+}
+
+.btn-book {
+  background-color: #f2711c !important;
+  color: #fff !important;
+}
+
+.navbar {
+  background-color: #1a1a1a !important;
+}
+
+.navbar-brand, .nav-link {
+  color: #bbb !important;
+  font-size: 14px;
+}
+
+.hero-section {
+  background-color: #1a1a1a;
+  padding: 100px 0;
+  color: #fff;
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.hero-section h2 {
+  color: #bbb;
+}
+
+#about {
+  background-color: #fff;
+  padding: 50px 0;
+}
+
+#about h3 {
+  color: #333;
+  margin-top: 20px;
+}
+
+.quote-section {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 30px 0;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.section-header h3 {
+  display: inline-block;
+  position: relative;
+}
+
+.section-header h3::before,
+.section-header h3::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 1000px;
+  height: 1px;
+  background-color: #d4d4d4;
+}
+
+.section-header h3::before {
+  right: 100%;
+  margin-right: 15px;
+}
+
+.section-header h3::after {
+  left: 100%;
+  margin-left: 15px;
+}
+
+#achievements .card {
+  border: 1px solid #d4d4d4;
+  background-color: #ffffff;
+}
+
+footer {
+  background-color: #1a1a1a;
+  color: #bbb;
+  padding: 30px 0;
+}
+
+footer h4 {
+  color: #fff;
+}
+
+footer .col-md-4:not(:last-child) {
+  border-right: 1px solid #333;
+}
+
+footer a {
+  color: #bbb;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.poetry-section ul,
+.poems-songs-section ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+
